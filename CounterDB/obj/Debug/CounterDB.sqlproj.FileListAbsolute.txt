@@ -1,0 +1,9 @@
+E:\Misc\Counter\CounterDB\bin\Debug\CounterDB.dacpac
+E:\Misc\Counter\CounterDB\bin\Debug\CounterDB.dll
+E:\Misc\Counter\CounterDB\bin\Debug\CounterDB.pdb
+E:\Misc\Counter\CounterDB\obj\Debug\Model.xml
+E:\Misc\Counter\CounterDB\obj\Debug\refactor.xml
+E:\Misc\Counter\CounterDB\obj\Debug\postdeploy.sql
+E:\Misc\Counter\CounterDB\obj\Debug\predeploy.sql
+E:\Misc\Counter\CounterDB\obj\Debug\CounterDB.dll
+E:\Misc\Counter\CounterDB\obj\Debug\CounterDB.pdb

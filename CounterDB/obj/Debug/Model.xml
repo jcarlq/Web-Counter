@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.4" DspName="Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="False" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="False" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="110" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="CounterDB.dll" />
+			<Metadata Name="FileName" Value="E:\MISC\COUNTER\COUNTERDB\OBJ\DEBUG\COUNTERDB.DLL" />
+			<Metadata Name="AssemblyName" Value="CounterDB" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="E:\Misc\Counter\CounterDB\obj\Debug\CounterDB.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions" Disambiguator="1">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiPaddingOn" Value="False" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Property Name="IsCursorDefaultScopeGlobal" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[saCounter]" Disambiguator="5" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[db_owner]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Count]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Count].[Count]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Count].[Update_Date]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint" Name="[dbo].[DF_Count_Update_Date]">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[(getdate())]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Count]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Count].[Update_Date]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="6" />
+		</Element>
+		<Element Type="SqlPermissionStatement" Name="[Grant.Connect.Database].[saCounter].[dbo]">
+			<Property Name="Permission" Value="1035" />
+			<Relationship Name="Grantee">
+				<Entry>
+					<References Name="[saCounter]" Disambiguator="5" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="SecuredObject">
+				<Entry>
+					<References Disambiguator="1" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlLogin" Name="[saCounter]">
+			<Property Name="Password" Value="BsevkdpoisbRhMdGAdw.grCgmsFT7_&amp;#$!~&lt;uuiBVm|foEdd" />
+			<Property Name="DefaultDatabase" Value="CounterDB" />
+			<Property Name="DefaultLanguage" Value="us_english" />
+			<Property Name="Sid" Value="0xE79BD8B33A31434E8A4AB2EDB0DFA55F" />
+			<Annotation Type="GloballyScoped" />
+		</Element>
+		<Element Type="SqlUser" Name="[saCounter]" Disambiguator="5">
+			<Property Name="LoginIdentifierScript">
+				<Value><![CDATA[[saCounter]]]></Value>
+			</Property>
+			<Property Name="AuthenticationType" Value="1" />
+			<Relationship Name="Login">
+				<Entry>
+					<References Name="[saCounter]" />
+				</Entry>
+			</Relationship>
+		</Element>
+	</Model>
+</DataSchemaModel>

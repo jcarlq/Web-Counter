@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [saCounter]
+    WITH PASSWORD = N'BsevkdpoisbRhMdGAdw.grCgmsFT7_&#$!~<uuiBVm|foEdd', SID = 0xE79BD8B33A31434E8A4AB2EDB0DFA55F, DEFAULT_DATABASE = [CounterDB], DEFAULT_LANGUAGE = [us_english];
+
